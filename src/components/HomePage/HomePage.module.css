@@ -2,6 +2,78 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   font-family: "Roboto", sans-serif;
+  margin-top: 3rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.hero-button {
+  background-color: #007bff;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button-link {
+  text-decoration: none;
+  color: white;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.block p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.block img {
+  width: 400px;
+  height: 275px;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
 }

@@ -18,6 +18,7 @@
 .navbar-center {
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .nav-link {

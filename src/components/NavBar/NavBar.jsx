@@ -1,5 +1,7 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+import Icon from "@mdi/react";
+import { mdiCart } from "@mdi/js";
 
 export default function NavBar() {
   return (
@@ -17,7 +19,8 @@ export default function NavBar() {
           Store
         </Link>
         <Link to="/checkout" className={styles.navLink}>
-          Checkout
+          <Icon path={mdiCart} size={1.5} title="Shopping Cart" />
+          {/* TODO: include a number of items in the cart icon */}
         </Link>
       </div>
     </div>
