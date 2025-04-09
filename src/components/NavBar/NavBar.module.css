@@ -1,0 +1,43 @@
+.navbar {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-size: 1.6rem;
+}
+
+.navbar-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.nav-link-home {
+  composes: nav-link;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav-link-home:hover {
+  text-decoration: none;
+  color: #000000;
+}
