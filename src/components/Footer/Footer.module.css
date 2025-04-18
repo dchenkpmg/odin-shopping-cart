@@ -1,0 +1,52 @@
+.footer {
+  font-family: "Roboto", sans-serif;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  margin: 5rem 5rem 2rem 5rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.footer-description {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.footer-copyright {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-top: 1rem;
+}

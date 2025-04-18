@@ -8,12 +8,13 @@ import HomePage from "./components/HomePage/HomePage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "",
+        index: true,
         element: <HomePage />,
       },
     ],

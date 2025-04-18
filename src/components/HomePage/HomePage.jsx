@@ -14,11 +14,9 @@ export default function HomePage() {
             Discover amazing products and deals on a wide range of goods sourced
             from all over the world!
           </p>
-          <button className={styles.heroButton}>
-            <Link to="/store" className={styles.heroButtonLink}>
-              Shop Now
-            </Link>
-          </button>
+          <Link to="/store" className={styles.heroButtonLink}>
+            Shop Now
+          </Link>
         </div>
       </div>
 

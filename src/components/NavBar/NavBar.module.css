@@ -18,6 +18,7 @@
 .navbar-center {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -34,6 +35,7 @@
 
 .nav-link-home {
   composes: nav-link;
+  font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
 }
