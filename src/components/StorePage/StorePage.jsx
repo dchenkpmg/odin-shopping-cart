@@ -5,7 +5,6 @@ import Icon from "@mdi/react";
 import { mdiPlus, mdiMinus } from "@mdi/js";
 import { useOutletContext } from "react-router-dom";
 
-// refactor this to use item card component so as not to rerender the entire page
 export default function StorePage() {
   const { cartItems, setCartItems, setCartItemCount } = useOutletContext();
   const items = useLoaderData();
@@ -14,11 +13,13 @@ export default function StorePage() {
     return acc;
   }, {});
   const [itemCount, setItemCount] = useState(cartItemCounts);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     const newItemCount = { ...itemCount, [id]: parseInt(value) };
     setItemCount(newItemCount);
   };
+
   const handleBlur = (e) => {
     const { id, value } = e.target;
     if (value < 1) {
@@ -29,6 +30,7 @@ export default function StorePage() {
       setItemCount(newItemCount);
     }
   };
+
   const handleAddItem = (id) => {
     if (itemCount[id] >= 10) {
       return;
@@ -36,6 +38,7 @@ export default function StorePage() {
     const newItemCount = { ...itemCount, [id]: itemCount[id] + 1 };
     setItemCount(newItemCount);
   };
+
   const handleRemoveItem = (id) => {
     if (itemCount[id] <= 1) {
       return;
@@ -43,6 +46,7 @@ export default function StorePage() {
     const newItemCount = { ...itemCount, [id]: itemCount[id] - 1 };
     setItemCount(newItemCount);
   };
+
   const handleAddToCart = (id, title, price, image) => {
     const itemToAdd = cartItems.find((item) => item.id === id);
     if (itemToAdd === undefined) {
@@ -66,10 +70,12 @@ export default function StorePage() {
             quantity: item.quantity + itemCount[id],
           };
         }
+        return item;
       });
       setCartItems(newCartItems);
     }
   };
+
   return (
     <div className={styles.gridContainer}>
       {items.map((item) => (
