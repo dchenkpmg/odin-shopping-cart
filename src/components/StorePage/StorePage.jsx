@@ -11,7 +11,21 @@ export default function StorePage({ cartItems, setCartItems }) {
     return acc;
   }, {});
   const [itemCount, setItemCount] = useState(cartItemCounts);
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    const newItemCount = { ...itemCount, [id]: parseInt(value) };
+    setItemCount(newItemCount);
+  };
+  const handleBlur = (e) => {
+    const { id, value } = e.target;
+    if (value < 1) {
+      const newItemCount = { ...itemCount, [id]: 1 };
+      setItemCount(newItemCount);
+    } else if (value > 10) {
+      const newItemCount = { ...itemCount, [id]: 10 };
+      setItemCount(newItemCount);
+    }
+  };
   const handleAddItem = (id) => {
     if (itemCount[id] >= 10) {
       return;
@@ -46,8 +60,10 @@ export default function StorePage({ cartItems, setCartItems }) {
             <input
               type="number"
               min="1"
+              id={item.id}
               value={itemCount[item.id]}
               onChange={(e) => handleChange(e)}
+              onBlur={(e) => handleBlur(e)}
             />
             <Icon
               path={mdiPlus}
