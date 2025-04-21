@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiCart } from "@mdi/js";
 
-export default function NavBar() {
+export default function NavBar({ itemCount }) {
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarStart}>
@@ -18,9 +18,11 @@ export default function NavBar() {
         <Link to="/store" className={styles.navLink}>
           Store
         </Link>
-        <Link to="/checkout" className={styles.navLink}>
+        <Link to="/checkout" className={styles.navLinkCart}>
           <Icon path={mdiCart} size={1.5} title="Shopping Cart" />
-          {/* TODO: include a number of items in the cart icon */}
+          {itemCount > 0 && (
+            <span className={styles.cartItemCount}>{itemCount}</span>
+          )}
         </Link>
       </div>
     </div>

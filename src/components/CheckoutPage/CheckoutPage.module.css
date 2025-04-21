@@ -1,0 +1,58 @@
+.checkout-page {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7rem;
+}
+
+.checkout-page h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.cart-item img {
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 8px;
+}
+
+.checkout-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.checkout-button {
+  background-color: #007bff;
+  text-decoration: none;
+  padding: 0.5rem 3rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.checkout-button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}

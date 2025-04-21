@@ -29,7 +29,7 @@
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #007bff;
 }
 
@@ -43,4 +43,21 @@
 .nav-link-home:hover {
   text-decoration: none;
   color: #000000;
+}
+
+.nav-link-cart {
+  composes: nav-link;
+}
+
+.nav-link-cart:hover {
+  text-decoration: none;
+}
+
+.cart-item-count {
+  background-color: #ff0000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
 }

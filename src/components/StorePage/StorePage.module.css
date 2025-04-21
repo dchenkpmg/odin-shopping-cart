@@ -1,0 +1,87 @@
+.store-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 1rem;
+  width: 15rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.store-item img {
+  object-fit: cover;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 8px;
+}
+
+.store-item h2 {
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  padding: 0 5rem;
+  margin-top: 2rem;
+}
+
+.store-add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.store-item input {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Remove default spin buttons in number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity-icon {
+  cursor: pointer;
+}
+
+.store-add-to-cart-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.store-add-to-cart-button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
