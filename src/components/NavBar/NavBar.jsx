@@ -2,6 +2,7 @@ import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiCart } from "@mdi/js";
+import PropTypes from "prop-types";
 
 export default function NavBar({ itemCount }) {
   return (
@@ -28,3 +29,11 @@ export default function NavBar({ itemCount }) {
     </div>
   );
 }
+
+NavBar.propTypes = {
+  itemCount: PropTypes.number.isRequired,
+};
+
+NavBar.defaultProps = {
+  itemCount: 0,
+};

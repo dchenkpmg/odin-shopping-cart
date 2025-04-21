@@ -3,8 +3,11 @@ import styles from "./StorePage.module.css";
 import { useState } from "react";
 import Icon from "@mdi/react";
 import { mdiPlus, mdiMinus } from "@mdi/js";
+import { useOutletContext } from "react-router-dom";
 
-export default function StorePage({ cartItems, setCartItems }) {
+// refactor this to use item card component so as not to rerender the entire page
+export default function StorePage() {
+  const { cartItems, setCartItems, setCartItemCount } = useOutletContext();
   const items = useLoaderData();
   const cartItemCounts = items.reduce((acc, item) => {
     acc[item.id] = 1;
@@ -39,6 +42,33 @@ export default function StorePage({ cartItems, setCartItems }) {
     }
     const newItemCount = { ...itemCount, [id]: itemCount[id] - 1 };
     setItemCount(newItemCount);
+  };
+  const handleAddToCart = (id, title, price, image) => {
+    const itemToAdd = cartItems.find((item) => item.id === id);
+    if (itemToAdd === undefined) {
+      const newCartItems = [
+        ...cartItems,
+        {
+          id: id,
+          title: title,
+          price: price,
+          quantity: itemCount[id],
+          image: image,
+        },
+      ];
+      setCartItems(newCartItems);
+      setCartItemCount(() => newCartItems.length);
+    } else {
+      const newCartItems = cartItems.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            quantity: item.quantity + itemCount[id],
+          };
+        }
+      });
+      setCartItems(newCartItems);
+    }
   };
   return (
     <div className={styles.gridContainer}>
@@ -75,7 +105,14 @@ export default function StorePage({ cartItems, setCartItems }) {
               }}
             />
           </div>
-          <button className={styles.storeAddToCartButton}>Add to Cart</button>
+          <button
+            className={styles.storeAddToCartButton}
+            onClick={() =>
+              handleAddToCart(item.id, item.title, item.price, item.image)
+            }
+          >
+            Add to Cart
+          </button>
         </div>
       ))}
     </div>

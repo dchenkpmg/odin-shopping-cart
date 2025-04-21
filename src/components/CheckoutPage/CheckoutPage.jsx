@@ -12,7 +12,7 @@ export default function CheckoutPage() {
           <div key={item.id} className={styles.cartItem}>
             <div className={styles.itemImageName}>
               <img src={item.image} alt={item.name} />
-              <p>{item.name}</p>
+              <p>{item.title}</p>
             </div>
             <p>Price: ${item.price}</p>
             <p>Quantity: {item.quantity}</p>
