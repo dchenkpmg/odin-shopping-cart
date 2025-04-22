@@ -4,6 +4,7 @@ import { useState } from "react";
 import Icon from "@mdi/react";
 import { mdiPlus, mdiMinus } from "@mdi/js";
 import { useOutletContext } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function StorePage() {
   const { cartItems, setCartItems, setCartItemCount } = useOutletContext();
@@ -124,3 +125,9 @@ export default function StorePage() {
     </div>
   );
 }
+
+StorePage.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+  setCartItems: PropTypes.func.isRequired,
+  setCartItemCount: PropTypes.func.isRequired,
+};

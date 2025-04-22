@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiPlus, mdiMinus } from "@mdi/js";
+import PropTypes from "prop-types";
 
 export default function CheckoutPage() {
   const { cartItems, setCartItems, setCartItemCount } = useOutletContext();
@@ -159,3 +160,9 @@ export default function CheckoutPage() {
     </div>
   );
 }
+
+CheckoutPage.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+  setCartItems: PropTypes.func.isRequired,
+  setCartItemCount: PropTypes.func.isRequired,
+};

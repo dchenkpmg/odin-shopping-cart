@@ -5,7 +5,6 @@ export const fetchItems = async () => {
       throw new Error(`HTTP Error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error("Error fetching items:", error.message);
