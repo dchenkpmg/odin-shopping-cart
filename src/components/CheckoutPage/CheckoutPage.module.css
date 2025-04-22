@@ -24,6 +24,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .cart-item img {
@@ -35,6 +36,17 @@
 
 .cart-item p {
   margin: 0;
+}
+
+.cart-item input {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .checkout-links {
@@ -65,25 +77,27 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 30rem;
+  flex: 0.5;
   flex-wrap: wrap;
 }
 
 .cart-items-header {
   display: flex;
   align-items: center;
-  margin-right: 7.5rem;
+  margin-right: 5.5rem;
   margin-bottom: 1rem;
-  gap: 7.5rem;
+  gap: 2rem;
 }
 
 .item-header {
-  width: 30rem;
+  flex: 1;
 }
 
 .item-header-other {
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .remove-btn {
@@ -93,4 +107,19 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.store-add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.quantity-icon {
+  cursor: pointer;
+}
+
+.quantity {
+  max-width: 2rem;
 }
