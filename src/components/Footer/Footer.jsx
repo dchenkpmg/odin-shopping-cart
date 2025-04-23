@@ -5,7 +5,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className={styles.logo}>Blah Goods</div>
+        <div className={styles.logo}>
+          <span>Blah Goods</span>
+        </div>
         <div className={styles.links}>
           <Link to="/" className={styles.navLink}>
             Home

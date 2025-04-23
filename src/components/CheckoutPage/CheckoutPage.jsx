@@ -110,6 +110,7 @@ export default function CheckoutPage() {
                   <input
                     type="number"
                     min="1"
+                    aria-label={`quantity-${item.id}`}
                     id={item.id}
                     value={item.quantity}
                     onChange={(e) => handleChange(e)}
